@@ -69,6 +69,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ML实验4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/19/ML%E5%AE%9E%E9%AA%8C4/" class="article-date">
+  <time class="dt-published" datetime="2024-11-19T02:13:09.000Z" itemprop="datePublished">2024-11-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/11/19/ML%E5%AE%9E%E9%AA%8C4/">ML实验4</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h1><ul>
+<li>问题 1：使用极大似然估计训练 Naive Bayes 模型，并使用该模型预测测试数据的类别，最终报告分类器的准确性。</li>
+<li>问题 2：使用不同大小的训练数据集训练 Naive Bayes 模型，并分析训练数据集大小对模型准确性的影响。</li>
+</ul>
+<h2 id="朴素贝叶斯算法"><a href="#朴素贝叶斯算法" class="headerlink" title="朴素贝叶斯算法"></a>朴素贝叶斯算法</h2><ul>
+<li>朴素贝叶斯基于贝叶斯定理的分类算法，假设给定特征之间相互独立。</li>
+<li>贝叶斯定理，$P(A∣B)&#x3D;P(B∣A)⋅P(A)&#x2F;P(B)$，P(A)和P(B)是事件A和事件B发生的概率。</li>
+<li>P(C|X)表示给定由X表示的数据点，数据点来自类别C的概率，选择$C_i$对应P(C|X)值最大的即为X实际类别。</li>
+<li>$P(C∣X)&#x3D;P(X∣C)⋅P(C)&#x2F;P(X)$</li>
+<li>计算先验概率：P(C)、P(X)。遍历训练数据获得不同类别总数，与总训练数据求出比例就是P(C)，</li>
+</ul>
+<h2 id="问题1–极大似然估计"><a href="#问题1–极大似然估计" class="headerlink" title="问题1–极大似然估计"></a>问题1–极大似然估计</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/19/ML%E5%AE%9E%E9%AA%8C4/" data-id="cm3o9xqol0000ysu1f61jaujc" data-title="ML实验4" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-OS实验6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/11/17/OS%E5%AE%9E%E9%AA%8C6/" class="article-date">
@@ -91,7 +140,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Hey, this is SDUer LWY. My first blog here is about os experiment.</p>
+        <p>Hey, this is SDUer LWY. My first blog here is about os experiment.<br><strong>惊讶地发现Linux中可以直接复制该pdf代码，那我手打的算什么，算我有种吗🙁</strong></p>
+<h1 id="哲学家就餐问题"><a href="#哲学家就餐问题" class="headerlink" title="哲学家就餐问题"></a>哲学家就餐问题</h1><h2 id="三个状态-思考、饥饿、就餐"><a href="#三个状态-思考、饥饿、就餐" class="headerlink" title="三个状态:思考、饥饿、就餐"></a>三个状态:思考、饥饿、就餐</h2><p>枚举类：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">State</span>&#123;thinking, hungry, eating&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="IPC机制"><a href="#IPC机制" class="headerlink" title="IPC机制"></a>IPC机制</h2><h3 id="信号量-class-Sema"><a href="#信号量-class-Sema" class="headerlink" title="信号量 class Sema"></a>信号量 class Sema</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">union</span> <span class="title class_">semuns</span> &#123;<span class="type">int</span> val;&#125; Sem_uns;</span><br></pre></td></tr></table></figure>
+<h2 id="锁-class-Lock"><a href="#锁-class-Lock" class="headerlink" title="锁 class Lock"></a>锁 class Lock</h2><h2 id="条件变量-Condition"><a href="#条件变量-Condition" class="headerlink" title="条件变量 Condition"></a>条件变量 Condition</h2><h2 id="管程"><a href="#管程" class="headerlink" title="管程"></a>管程</h2><p>操作系统中解决多进程中并发控制问题的同步机制。</p>
 
       
     </div>
@@ -188,6 +241,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/11/19/ML%E5%AE%9E%E9%AA%8C4/">ML实验4</a>
+          </li>
         
           <li>
             <a href="/2024/11/17/OS%E5%AE%9E%E9%AA%8C6/">OS实验6</a>
